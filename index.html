@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>LeadCapture Pro â Capturez vos leads salon comme une pieuvre</title>
 <meta name="description" content="L'app qui capture, qualifie et convertit vos leads de salons professionnels en quelques secondes.">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -115,13 +115,79 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:44px 40
 .tok2{border-left:3px solid var(--green)}.terr2{border-left:3px solid var(--red)}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--bg3);border-radius:3px}
 @media(max-width:900px){.hi,.fg,.hg,.pg,.tg,.ftop{grid-template-columns:1fr}.mockup{display:none}.ht{font-size:36px}.nls{display:none}}
+
+/* ═══ MOBILE OPTIMISATIONS ═══ */
+@media (max-width: 768px) {
+  /* Navigation mobile */
+  .ni { display: none !important; }
+  .nb { display: flex; flex-direction: column; gap: 4px; }
+  
+  /* Hero section */
+  .hero { padding: 80px 20px 40px; text-align: center; }
+  .hero h1 { font-size: clamp(32px, 8vw, 52px) !important; line-height: 1.1; }
+  .hero p { font-size: 16px !important; }
+  .hero-btns { flex-direction: column; align-items: center; gap: 12px; }
+  .hero-btns a { width: 100%; max-width: 320px; text-align: center; }
+  
+  /* Grid → colonne unique */
+  .features-grid,
+  .pricing-grid,
+  .steps-grid,
+  [class*="grid"] { 
+    grid-template-columns: 1fr !important; 
+    gap: 16px !important;
+  }
+  
+  /* Padding global */
+  section { padding: 48px 20px !important; }
+  .container, [class*="container"] { padding: 0 20px !important; max-width: 100% !important; }
+  
+  /* Textes */
+  h2 { font-size: clamp(24px, 6vw, 36px) !important; }
+  h3 { font-size: clamp(18px, 4vw, 24px) !important; }
+  
+  /* Cards */
+  .card, [class*="card"] { padding: 20px !important; }
+  
+  /* Boutons */
+  .btn, button { 
+    min-height: 48px; 
+    font-size: 15px !important;
+    padding: 12px 20px !important;
+  }
+  
+  /* Pricing cards */
+  .pricing-card { margin-bottom: 16px; }
+  
+  /* Footer */
+  .footer-grid, .flinks-grid { 
+    grid-template-columns: 1fr 1fr !important; 
+    gap: 24px !important;
+  }
+  
+  /* Nav sticky mobile */
+  nav { padding: 10px 16px !important; }
+  .nl { display: none !important; }
+  
+  /* Mock/screenshot section */
+  .mock, [class*="mock"] { 
+    width: 100% !important; 
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 28px !important; }
+  .footer-grid, .flinks-grid { grid-template-columns: 1fr !important; }
+}
 </style>
 </head>
 <body>
 <nav>
   <div class="ni">
     <a href="#" class="nl"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2080%2080%22%20fill%3D%22none%22%3E%3Cellipse%20cx%3D%2240%22%20cy%3D%2229%22%20rx%3D%2219%22%20ry%3D%2221%22%20fill%3D%22%23f97316%22%2F%3E%3Cellipse%20cx%3D%2240%22%20cy%3D%2227%22%20rx%3D%2219%22%20ry%3D%2218%22%20fill%3D%22%23fb923c%22%2F%3E%3Ccircle%20cx%3D%2233%22%20cy%3D%2226%22%20r%3D%223.2%22%20fill%3D%22white%22%2F%3E%3Ccircle%20cx%3D%2247%22%20cy%3D%2226%22%20r%3D%223.2%22%20fill%3D%22white%22%2F%3E%3Ccircle%20cx%3D%2234%22%20cy%3D%2225.2%22%20r%3D%221.4%22%20fill%3D%22%2308090d%22%2F%3E%3Ccircle%20cx%3D%2248%22%20cy%3D%2225.2%22%20r%3D%221.4%22%20fill%3D%22%2308090d%22%2F%3E%3Cpath%20d%3D%22M%2035%2032%20Q%2040%2036.5%2045%2032%22%20stroke%3D%22white%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M%2023%2046%20Q%2015%2053%2013%2061%20Q%2011%2068%2017%2069%20Q%2022%2070%2023%2063%20Q%2025%2057%2029%2052%22%20stroke%3D%22%23f97316%22%20stroke-width%3D%224.5%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M%2031%2050%20Q%2027%2059%2026%2067%20Q%2025%2073%2031%2074%20Q%2036%2074%2036%2067%20Q%2037%2060%2037%2054%22%20stroke%3D%22%23f97316%22%20stroke-width%3D%224.5%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M%2040%2052%20Q%2040%2061%2040%2069%20Q%2040%2074%2044%2074%20Q%2048%2074%2047%2068%20Q%2046%2061%2043%2053%22%20stroke%3D%22%23f97316%22%20stroke-width%3D%224.5%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M%2049%2050%20Q%2053%2059%2054%2067%20Q%2055%2073%2049%2074%20Q%2044%2074%2044%2067%20Q%2043%2060%2043%2054%22%20stroke%3D%22%23f97316%22%20stroke-width%3D%224.5%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%2F%3E%3Cpath%20d%3D%22M%2057%2046%20Q%2065%2053%2067%2061%20Q%2069%2068%2063%2069%20Q%2058%2070%2057%2063%20Q%2055%2057%2051%2052%22%20stroke%3D%22%23f97316%22%20stroke-width%3D%224.5%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%2F%3E%3Ccircle%20cx%3D%2214%22%20cy%3D%2262%22%20r%3D%224.5%22%20stroke%3D%22%23fbbf24%22%20stroke-width%3D%221.8%22%20fill%3D%22none%22%2F%3E%3Cline%20x1%3D%2217.5%22%20y1%3D%2265.5%22%20x2%3D%2220%22%20y2%3D%2268%22%20stroke%3D%22%23fbbf24%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%2F%3E%3Crect%20x%3D%2223%22%20y%3D%2267%22%20width%3D%2210%22%20height%3D%227%22%20rx%3D%221.5%22%20fill%3D%22%23fbbf24%22%2F%3E%3Crect%20x%3D%2243%22%20y%3D%2267%22%20width%3D%227%22%20height%3D%229%22%20rx%3D%221.8%22%20fill%3D%22%23fbbf24%22%2F%3E%3Crect%20x%3D%2258%22%20y%3D%2261%22%20width%3D%2211%22%20height%3D%226.5%22%20rx%3D%221.5%22%20fill%3D%22%23fbbf24%22%2F%3E%3C%2Fsvg%3E" alt="LeadCapture Pro"><span class="nb">Lead<span>Capture</span> Pro</span></a>
-    <div class="nls"><a href="#features">FonctionnalitÃ©s</a><a href="#how">Comment Ã§a marche</a><a href="#pricing">Tarifs</a><a href="#testi">Avis</a></div>
+    <div class="nls"><a href="#features">Fonctionnalités</a><a href="#how">Comment ça marche</a><a href="#pricing">Tarifs</a><a href="#testi">Avis</a></div>
     <div style="margin-left:16px;display:flex;gap:8px">
       <a href="#pricing" class="btn bs">Tarifs</a>
       <button class="btn bp" onclick="openCheckout('Pro','49','price_1TBywcGp1phJLefEqetywwYd')">Commencer â</button>
@@ -132,12 +198,12 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:44px 40
 <section class="hero">
   <div class="hi">
     <div>
-      <div class="hbadge">ð Nouveau â Score IA + Relance automatique</div>
-      <h1 class="ht">GÃ©rez vos leads salon<br><em>comme une pieuvre</em></h1>
+      <div class="hbadge">🐙 Nouveau â Score IA + Relance automatique</div>
+      <h1 class="ht">Gérez vos leads salon<br><em>comme une pieuvre</em></h1>
       <p class="hs">Scanner, qualifier, relancer. Capturez chaque contact de vos salons professionnels en quelques secondes â badge NFC, QR code ou saisie rapide.</p>
       <div class="ha">
         <button class="btn bp" style="padding:13px 28px;font-size:15px;border-radius:10px" onclick="openCheckout('Pro','49','price_1TBywcGp1phJLefEqetywwYd')">Commencer maintenant â</button>
-        <a href="#features" class="btn bs" style="padding:13px 22px;font-size:15px;border-radius:10px">Voir les fonctionnalitÃ©s</a>
+        <a href="#features" class="btn bs" style="padding:13px 22px;font-size:15px;border-radius:10px">Voir les fonctionnalités</a>
       </div>
       <div class="hp"><div class="havs"><span>OJ</span><span>SD</span><span>ML</span><span>JB</span></div><span style="margin-left:8px">+120 commerciaux utilisent LeadCapture Pro</span></div>
     </div>
@@ -145,7 +211,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:44px 40
       <div class="mbar"><div class="md" style="background:#ef4444"></div><div class="md" style="background:#fbbf24"></div><div class="md" style="background:#22c55e"></div><div class="murl">app.leadcapturepro.fr â Salon Pro Paris 2026</div></div>
       <div class="mb">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px">
-          <div class="ms"><div><div class="msl">Leads captures</div><div class="msv" style="color:var(--orange)">47</div></div><span style="font-size:18px">ð</span></div>
+          <div class="ms"><div><div class="msl">Leads captures</div><div class="msv" style="color:var(--orange)">47</div></div><span style="font-size:18px">🐙</span></div>
           <div class="ms"><div><div class="msl">Convertis</div><div class="msv" style="color:var(--green2)">12</div></div><span style="font-size:18px">OK</span></div>
         </div>
         <div class="mcap"><div class="mcl">Capture Rapide</div><div class="mcf"><div class="mfield">Sophie Martin</div><div class="mfield">Acme Corp</div><div class="mfield">DG</div><div class="mfield">+33 6 12...</div></div><div class="mbtn2">Capturer le Lead</div></div>
@@ -160,7 +226,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:44px 40
 <div class="logos"><div style="max-width:1100px;margin:0 auto"><div class="ll">Ils nous font confiance</div><div class="llist"><span>Acme Corp</span><span>TechFlow</span><span>Inno Labs</span><span>Digital Hub</span><span>Smart Sys</span><span>FutureTech</span></div></div></div>
 
 <section id="features"><div class="si">
-  <div class="seye">ð Fonctionnalites</div>
+  <div class="seye">🐙 Fonctionnalites</div>
   <h2 class="stit">Tout ce dont vous avez besoin<br><em>dans une seule app</em></h2>
   <p class="ssub">LeadCapture Pro gere chaque tentacule de votre processus â de la collecte a la conversion.</p>
   <div class="fg">
@@ -206,7 +272,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:44px 40
       </div>
     </div>
     <div class="plan featured">
-      <div class="pbadge">ð Le plus populaire</div>
+      <div class="pbadge">🐙 Le plus populaire</div>
       <div class="pname">Pro</div><div class="pdesc">Pour une equipe commerciale</div>
       <div class="pprice"><span class="ppv" style="color:var(--orange)">49</span><span style="font-size:24px;font-weight:700;color:var(--orange);margin-top:8px">EUR</span><span class="ppper">/mois</span></div>
       <div class="pbilled">Sans engagement - Acces immediat</div>
@@ -250,7 +316,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:44px 40
 
 <section><div class="si">
   <div class="ctab">
-    <div class="hbadge" style="margin:0 auto 18px;width:fit-content">ð Acces immediat apres paiement</div>
+    <div class="hbadge" style="margin:0 auto 18px;width:fit-content">🐙 Acces immediat apres paiement</div>
     <h2 class="ctit">Pret a capturer vos leads<br>comme une pieuvre ?</h2>
     <p class="csub">Rejoignez +120 commerciaux qui ne perdent plus aucun lead.</p>
     <div class="cact">
@@ -268,7 +334,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:44px 40
     <div><div class="fct">Support</div><div class="flinks"><a href="mailto:contact@oj-sales.com">Contact</a><a href="#">FAQ</a><a href="#">Documentation</a></div></div>
     <div><div class="fct">Legal</div><div class="flinks"><a href="/cgv.html">CGV</a><a href="/cgv.html#ml4">Confidentialite</a><a href="/cgv.html#mentions">Mentions legales</a></div></div>
   </div>
-  <div class="fbot"><span>2026 LeadCapture Pro by OJ Sales. Tous droits reserves.</span><span style="font-size:10px">ð Powered by Claude AI</span></div>
+  <div class="fbot"><span>2026 LeadCapture Pro by OJ Sales. Tous droits reserves.</span><span style="font-size:10px">🐙 Powered by Claude AI</span></div>
 </div></footer>
 
 <div id="modal" style="display:none"><div class="mbg" onclick="if(event.target===this)closeModal()"><div class="mmodal">
@@ -282,7 +348,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border2);padding:44px 40
       <div class="fg2"><label class="fl">Entreprise</label><input class="fi3" id="pc" placeholder="Acme Corp"></div>
     </div>
     <div style="background:var(--bg3);border:1px solid var(--border2);border-radius:7px;padding:11px 12px;margin-bottom:12px;display:flex;align-items:center;gap:8px">
-      <span style="font-size:18px">ð³</span><span style="color:var(--muted);font-size:12px">Paiement securise - Vous serez redirige vers Stripe</span>
+      <span style="font-size:18px">🚀³</span><span style="color:var(--muted);font-size:12px">Paiement securise - Vous serez redirige vers Stripe</span>
     </div>
     <button type="submit" class="btn bp" style="width:100%;justify-content:center;padding:13px;font-size:14px;border-radius:9px" id="pbtn">Payer et acceder</button>
     <div class="stnote">Securise par <strong style="color:var(--muted2);margin-left:3px">Stripe</strong> - SSL - Sans engagement</div>
